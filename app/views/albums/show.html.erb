@@ -1,0 +1,30 @@
+
+<h1>Album Name</h1>
+<table>
+
+  <tr> <%= @album.name %> </tr>
+  <td></td>
+  <tr></tr>
+</table>
+
+  <h2>Track List</h2>
+  <ol>
+    <% @album.tracks.each do |track| %>
+    <li>
+      <a href="http://localhost:3000/tracks/<%= track.id %>/">
+
+
+
+      <%= track.name %></a> </li>
+    <% end %>
+</ol>
+<br>
+<br>
+
+
+<a href="http://localhost:3000/bands/<%= @album.band_id %>/">
+
+
+
+Back to Band
+</a>

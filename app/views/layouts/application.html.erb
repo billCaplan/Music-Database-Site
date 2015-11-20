@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicInventory</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if logged_in? %>
+  <%= button_to "Logout", session_url, method: :delete %>
+  <%= current_user.email %>
+<% else %>
+  <%= link_to "Sign in", new_session_url %> or <%= link_to "Sign up", new_user_url %>
+<% end %>
+  <a href="http://localhost:3000/bands/"> Home </a>
+
+
+<%= yield %>
+
+</body>
+</html>

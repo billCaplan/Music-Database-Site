@@ -1,0 +1,31 @@
+<h1> Band Name </h1>
+
+
+<%= @band.name %>
+
+<h1> Albums List </h1>
+<table>
+  <td></td>
+  <% @band.albums.each do |album| %>
+<tr> <a href="http://localhost:3000/albums/<%= album.id %>/"> <%= album.name %> </a> </tr>
+<% end %>
+</td>
+</table>
+
+<br>
+<br>
+<br>
+
+
+  <td> <a href="http://localhost:3000/bands/<%= @band.id %>/albums/new"> Add An Album </a> </td>
+   <a href="http://localhost:3000/bands/">
+
+
+
+  Back to Band List
+  </a>
+
+  <br>
+  <br>
+  <%= button_to "Delete Band", { action: "destroy", id: @band.id},
+                                method: :delete, data: { confirm: "Are you sure?" } %>

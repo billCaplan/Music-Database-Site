@@ -1,0 +1,16 @@
+  <h1> List of Bands</h1>
+
+<table>
+
+
+    <% Band.all.each do |band| %>
+    <tr></tr>
+      <td> <a href="http://localhost:3000/bands/<%= band.id %>/"> <%= band.name %> </a> </td>
+    <% end %>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+  <a href="http://localhost:3000/bands/new/"> Create a new band </a>
