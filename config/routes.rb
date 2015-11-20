@@ -17,5 +17,9 @@ end
 
 resources :tracks, only: [:create,:edit, :show, :update, :destroy]
 
+resources :tracks, only: [:index] do
+  resources :notes, only: [:new, :create,:edit, :show, :update, :destroy]
+end
+
 
 end

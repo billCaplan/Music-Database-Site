@@ -12,12 +12,21 @@
 <ul>
   <li>Notes<li>
 <% @track.notes.each do |note| %>
-<li><%= note.note_body %></li>
+<li><%= note.note_body %> posted by <%= note.user.email %></li>
 <ul>
   <% end %>
 
 <br>
 <br>
+
+<br>
+<br>
+
+<a href="http://localhost:3000/tracks/<%= @track.album_id %>/notes/new">
+  Leave a new note
+  </a
+
+
 
 
 
