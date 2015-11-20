@@ -31,6 +31,13 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  has_many(
+  :notes,
+  foreign_key: :user_id,
+  primary_key: :id,
+  class_name: "Note"
+  )
+
   private
 
   def ensure_session_token

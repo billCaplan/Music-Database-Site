@@ -6,4 +6,12 @@ class Track < ActiveRecord::Base
   primary_key: :id,
   class_name: 'Album'
   )
+
+  has_many(
+  :notes,
+  foreign_key: :track_id,
+  primary_key: :id,
+  class_name: 'Note'
+  )
+
 end

@@ -9,9 +9,19 @@
 <br>
 <br>
 
+<ul>
+  <li>Notes<li>
+<% @track.notes.each do |note| %>
+<li><%= note.note_body %></li>
+<ul>
+  <% end %>
+
+<br>
+<br>
+
+
+
 <a href="http://localhost:3000/albums/<%= @track.album_id %>/">
-
-
 
 Back to Album
 </a>
