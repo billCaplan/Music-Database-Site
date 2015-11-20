@@ -9,11 +9,12 @@
 <br>
 <br>
 
-<ul>
-  <li>Notes<li>
+
+  <h3>Notes</h3>
 <% @track.notes.each do |note| %>
-<li><%= note.note_body %> posted by <%= note.user.email %></li>
-<ul>
+<%= note.note_body %> posted by <%= note.user.email %>
+<br>
+
   <% end %>
 
 <br>
