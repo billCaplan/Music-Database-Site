@@ -1,5 +1,9 @@
 class AlbumsController < ApplicationController
 
+  def index
+    redirect_to bands_url
+  end
+
 
 
   def new
@@ -19,6 +23,7 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find_by(id: params[:id])
+
     render :show
   end
 
